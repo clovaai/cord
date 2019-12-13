@@ -2,27 +2,29 @@
 
 We introduce a novel dataset called **CORD**, which stands for a **CO**nsolidated **R**eceipt **D**ataset for post-OCR parsing.
 
+![teaser](figure/sample.png)
+
 ### Abstract [[paper](https://openreview.net/pdf?id=SJl3z659UH)]
 OCR is inevitably linked to NLP since its final output is in text. Advances in document intelligence are driving the need for a unified technology that integrates OCR with various NLP tasks, especially semantic parsing. Since OCR and semantic parsing have been studied as separate tasks so far, the datasets for each task on their own are rich, while those for the integrated post-OCR parsing tasks are relatively insufficient. In this study, we publish a consolidated dataset for receipt parsing as the first step towards post-OCR parsing tasks. The dataset consists of thousands of Indonesian receipts, which contains images and box/text annotations for OCR, and multi-level semantic labels for parsing. The proposed dataset can be used to address various OCR and parsing tasks.
 
 
 ## Updates
-- 1,000 sample dataset will be available soon. We are asking receipt providers for consent of receipt disclosure. We are sorry for the delay in the release. [20191212]
+- 1,000 sample dataset will be available soon. Some class labels shown in the original paper were changed due to Indonesian legal issues. In particular, the ```store_info```, ```payment_info```, and ```etc``` fields have been removed from the target class to be published. [20191212]
 
 
 
 ## Key Features
-- Large Scale: Over 11,000 Indonesian receipts collected from shops and restaurants
-- Fine-grained classes: Four superclass and 34 subclass labels
-- Class hierarchy: Includes group annotations
-- Additional information, e.g. region of interest (ROI), repeating symbol (cut lines), 'is_key' flag
+- Large Scale: over 11,000 Indonesian receipts collected from shops and restaurants
+- Fine-grained classes: five superclass and 42 subclass labels
+- Multi hierarchy: includes group annotations
+- Additional information: line group (```row_id```), region of interest (```roi```), cut lines (```repeating_symbol```), and ```is_key``` flag
 
 
 ## Data Specification (for the whole dataset)
 
 ### Class Definition
 
-| No | Superclasses   | Subclasses               | Description                               |
+| No | Category       | Tag field (subclasses)   | Description                               |
 |----|----------------|--------------------------|-------------------------------------------|
 | 1  | menu (16)      | menu.nm                  | name of menu                              |
 | 2  |                | menu.num                 | identification # of menu                  |
@@ -94,7 +96,7 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 
 ## Download Link
 
-| No | Name | Total | # train | # dev  | # test | date |
+| No | Name | Total | # train | # dev  | # test | release date |
 | -- | -- | -- | -- | -- | -- | -- |
 | 0 | [sample]() | 1,000 | 800 | 100 | 100 | 6 Dec 2019 |
 
