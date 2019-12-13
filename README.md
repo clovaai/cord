@@ -9,7 +9,7 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 
 
 ## Updates
-- 1,000 sample dataset will be available soon. Some class labels shown in the original paper were changed due to Indonesian legal issues. In particular, the ```store_info```, ```payment_info```, and ```etc``` fields have been removed from the target class to be published. [20191212]
+- 1,000 sample dataset will be available soon. Some class labels shown in the original paper were removed due to Indonesian legal issues. In particular, the ```store_info```, ```payment_info```, and ```etc``` fields have been removed from the target class to be published. [20191212]
 
 
 
