@@ -90,7 +90,7 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 | roi              |            |        | Four coordinates that encompass the area of receipt region |
 | ---------------- | ---------- | ------ | ---------------------------------------------------------- |
 | repeating_symbol | quad       |        | Four coordinates of quadrilateral                          |
-|                  | text       |        | = or - or .                                                |
+|                  | text       |        | = or - or . or etc.                                        |
 
 
 
