@@ -11,8 +11,7 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 ## Updates
 - 1,000 sample dataset will be available soon. Some class labels shown in the original paper were removed due to Indonesian legal issues. In particular, the ```store_info```, ```payment_info```, and ```etc``` fields have been removed from the target class to be published. [20191212]
 - 1,000 sample dataset has been released. [20191226]
-
-
+- Some categories not used in the current dataset have been removed from the class definition. [20200210]
 
 ## Key Features
 - Large Scale: over 11,000 Indonesian receipts collected from shops and restaurants
@@ -23,11 +22,11 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 
 ## Data Specification (for the whole dataset)
 
-### Class Definition
+### Class Definition (total 30)
 
 | No | Category       | Tag field (subclasses)   | Description                               |
 |----|----------------|--------------------------|-------------------------------------------|
-| 1  | menu (16)      | menu.nm                  | name of menu                              |
+| 1  | menu (14)      | menu.nm                  | name of menu                              |
 | 2  |                | menu.num                 | identification # of menu                  |
 | 3  |                | menu.unitprice           | unit price of menu                        |
 | 4  |                | menu.cnt                 | quantity of menu                          |
@@ -37,30 +36,30 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 | 8  |                | menu.vatyn               | whether the price includes tax or not     |
 | 9  |                | menu.etc                 | others                                    |
 | 10 |                | menu.sub_nm              | name of submenu                           |
-| 11 |                | menu.sub_num             | identification # of submenu               |
+| 11 |                | ~~menu.sub_num~~         | ~~identification # of submenu~~           |
 | 12 |                | menu.sub_unitprice       | unit price of submenu                     |
 | 13 |                | menu.sub_cnt             | quantity of submenu                       |
-| 14 |                | menu.sub_discountprice   | discounted price of submenu               |
+| 14 |                | ~~menu.sub_discountprice~~| ~~discounted price of submenu~~          |
 | 15 |                | menu.sub_price           | total price of submenu                    |
 | 16 |                | menu.sub_etc             | others                                    |
-| 17 | void menu (6)  | voidmenu.nm              | name of menu                              |
-| 18 |                | voidmenu.num             | identification # of menu                  |
-| 19 |                | voidmenu.unitprice       | unit price of menu                        |
-| 20 |                | voidmenu.cnt             | quantity of menu                          |
-| 21 |                | voidmenu.price           | total price of menu                       |
-| 22 |                | voidmenu.etc             | others                                    |
-| 23 | subtotal (8)   | subtotal.subtotal_price  | subtotal price                            |
+| 17 | void menu (2)  | void_menu.nm              | name of menu                             |
+| 18 |                | ~~voidmenu.num~~         | ~~identification # of menu~~              |
+| 19 |                | ~~voidmenu.unitprice~~   | ~~unit price of menu~~                    |
+| 20 |                | ~~voidmenu.cnt~~         | ~~quantity of menu~~                      |
+| 21 |                | void_menu.price           | total price of menu                      |
+| 22 |                | ~~voidmenu.etc~~         | ~~others~~                                |
+| 23 | subtotal (6)   | subtotal.subtotal_price  | subtotal price                            |
 | 24 |                | subtotal.discount_price  | discounted price in total                 |
-| 25 |                | subtotal.subtotal_count  | Total number of items                     |
+| 25 |                | ~~subtotal.subtotal_count~~| ~~Total number of items~~               |
 | 26 |                | subtotal.service_price   | service charge                            |
 | 27 |                | subtotal.othersvc_price  | added charge other than service charge    |
 | 28 |                | subtotal.tax_price       | tax amount                                |
-| 29 |                | subtotal.tax_and_service | tax + service                             |
+| 29 |                | ~~subtotal.tax_and_service~~| ~~tax + service~~                      |
 | 30 |                | subtotal.etc             | others                                    |
-| 31 | void total (4) | voidtotal.subtotal_price | void subtotal price                       |
-| 32 |                | voidtotal.tax_price      | void tax price                            |
-| 33 |                | voidtotal.total_price    | total void price                          |
-| 34 |                | voidtotal.etc            | void etc information                      |
+| 31 | void total (0) | ~~voidtotal.subtotal_price~~| ~~void subtotal price~~                |
+| 32 |                | ~~voidtotal.tax_price~~  | ~~void tax price~~                        |
+| 33 |                | ~~voidtotal.total_price~~| ~~total void price~~                      |
+| 34 |                | ~~voidtotal.etc~~        | ~~void etc information~~                  |
 | 35 | total (8)      | total.total_price        | total price                               |
 | 36 |                | total.total_etc          | others                                    |
 | 37 |                | total.cashprice          | amount of price paid in cash              |
