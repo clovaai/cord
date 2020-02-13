@@ -86,11 +86,12 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 |                  | split      |        | 'train' or 'dev' or 'test'                                 |
 |                  | image_size |        | Size of the image (by pixel)                               |
 | ---------------- | ---------- | ------ | ---------------------------------------------------------- |
-| roi              |            |        | Four coordinates that encompass the area of receipt region |
+| roi*             |            |        | Four coordinates that encompass the area of receipt region |
 | ---------------- | ---------- | ------ | ---------------------------------------------------------- |
 | repeating_symbol | quad       |        | Four coordinates of quadrilateral                          |
 |                  | text       |        | = or - or . or etc.                                        |
 
+*A blank 'roi' value means the entire area of the image.
 
 
 
