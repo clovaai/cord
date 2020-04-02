@@ -99,7 +99,7 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 
 | No | Name | Total | # train | # dev  | # test | release date |
 | -- | -- | -- | -- | -- | -- | -- |
-| 0 | [sample](https://drive.google.com/drive/folders/1_r2rgPKBqqFmEFoNvz2lQGfIIfRALJ_W?usp=sharin) [(zip)](https://drive.google.com/file/d/1smHBfvG9TzSEBtKNXQKnf7SlK6DPRt7H/view?usp=sharing)| 1,000 | 800 | 100 | 100 | 26 Dec 2019 |
+| 0 | [sample](https://drive.google.com/drive/folders/1_r2rgPKBqqFmEFoNvz2lQGfIIfRALJ_W?usp=sharin) [(zip)](https://drive.google.com/drive/folders/14OEWr86qotVBMAsWk7lymMytxn5u-kM6?usp=sharing)| 1,000 | 800 | 100 | 100 | 26 Dec 2019 |
 
 
 
