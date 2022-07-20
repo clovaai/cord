@@ -23,6 +23,9 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 
 
 ## Updates
+
+- CORD v2 data has been uploaded to the Hugging Face Datasets. We investigated all data and corrected the incorrect labels. Also, we added the attribute `sub_group_id` to each element of `valid_line`. We can use this information to describe more accurate hierarchy of the resulting parse. See the `gt_parse` of the examples containing the `menu.sub_nm`, and compare those of the CORD v1. [20220720]
+- CORD v1 data has been uploaded to the Hugging Face Datasets. CORD v1 has the same contents as v0 except the `gt_parse` attribute. `gt_parse` represents the `parse` format constructed from the `valid_line`. [20220720]
 - 1,000 sample dataset will be available soon. Some class labels shown in the original paper were removed due to Indonesian legal issues. In particular, the ```store_info```, ```payment_info```, and ```etc``` fields have been removed from the target class to be published. [20191212]
 - 1,000 sample dataset has been released. [20191226]
 - Some categories not used in the current dataset have been removed from the class definition. [20200210]
@@ -111,9 +114,11 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
 
 ## Download Link
 
-| No | Name | Total | # train | # dev  | # test | release date |
+| Version | Name | Total | # train | # dev  | # test | release date |
 | -- | -- | -- | -- | -- | -- | -- |
-| 0 | [sample](https://drive.google.com/drive/folders/1_r2rgPKBqqFmEFoNvz2lQGfIIfRALJ_W?usp=sharin) [(zip)](https://drive.google.com/drive/folders/14OEWr86qotVBMAsWk7lymMytxn5u-kM6?usp=sharing)| 1,000 | 800 | 100 | 100 | 26 Dec 2019 |
+| v0 | [sample](https://drive.google.com/drive/folders/1_r2rgPKBqqFmEFoNvz2lQGfIIfRALJ_W?usp=sharin) [(zip)](https://drive.google.com/drive/folders/14OEWr86qotVBMAsWk7lymMytxn5u-kM6?usp=sharing)| 1,000 | 800 | 100 | 100 | 26 Dec 2019 |
+| v1 | [Hugging Face Datasets Link](https://huggingface.co/datasets/naver-clova-ix/cord-v1)| 1,000 | 800 | 100 | 100 | 20 Jul 2022 |
+| v2 | [Hugging Face Datasets Link](https://huggingface.co/datasets/naver-clova-ix/cord-v2)| 1,000 | 800 | 100 | 100 | 20 Jul 2022 |
 
 
 
@@ -138,6 +143,14 @@ OCR is inevitably linked to NLP since its final output is in text. Advances in d
   booktitle={Document Intelligence Workshop at Neural Information Processing Systems}
   year={2019}
 }
+``` 
+### OCR-free Document Understanding Transformer 🍩
+
 ```
-
-
+@article{kim2021donut,
+   title={OCR-free Document Understanding Transformer},
+   author={Kim, Geewook and Hong, Teakgyu and Yim, Moonbin and Nam, JeongYeon and Park, Jinyoung and Yim, Jinyeong and Hwang, Wonseok and Yun, Sangdoo and Han, Dongyoon and Park, Seunghyun},
+   journal={arXiv preprint arXiv:2111.15664},
+   year={2021}
+}
+```
